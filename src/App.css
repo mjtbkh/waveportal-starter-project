@@ -37,3 +37,36 @@
   width: 50%;
   margin: 16px auto;
 }
+
+.counter {
+	text-align: center;
+	font-weight: bold
+}
+.spinner {
+	background: white;
+	padding: 5px;
+	border-radius: 5px;
+	border-left: 4px solid green;
+	color: green;
+	display: flex;
+	gap: 5px;
+	margin-bottom: 10px
+}
+svg {
+	animation: spin 1200ms linear 150ms infinite;
+}
+.h-6 {
+	height: 18px;
+}
+.w-6 {
+	width: 18px
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0)
+	}
+	to {
+		transform: rotate(360deg)
+	}
+}
