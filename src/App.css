@@ -1,21 +1,40 @@
 .mainContainer {
   display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
   justify-content: center;
   width: 100%;
   margin-top: 64px;
+  align-items: center;
+  position: relative;
 }
-
+.errorContainer {
+	position: absolute;
+    background: #ef7d7d;
+    border-left: 4px solid #e93f3f;
+    color: white;
+    left: 0;
+    bottom: 0;
+    transform: translate(15px, -5px);
+    padding: 10px;
+}
 .dataContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
+  width: 600px;
   padding: 20px;
   color: white;
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
   box-shadow: 0 10px 16px 1px gray;
 }
-
+.dataContainer input {
+  padding: 10px;
+  width: 80%;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: none;
+}
 .header {
   text-align: center;
   font-size: 32px;
@@ -25,48 +44,57 @@
 .bio {
   text-align: center;
   color: white;
-  margin-top: 16px;
+  margin: 26px 0;
   line-height: 32px;
 }
 
 .waveButton {
   cursor: pointer;
-  padding: 8px;
-  border: 0;
-  border-radius: 5px;
-  width: 50%;
+  padding: 12px 8px;
+  width: 40%;
   margin: 16px auto;
+  background: blueviolet;
+  border: 1px solid white;
+  color: white;
+  font-weight: bold;
+}
+
+.address {
+  padding: 5px 0;
+  color: #444;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .counter {
-	text-align: center;
-	font-weight: bold
+  text-align: center;
+  font-weight: bold;
 }
 .spinner {
-	background: white;
-	padding: 5px;
-	border-radius: 5px;
-	border-left: 4px solid green;
-	color: green;
-	display: flex;
-	gap: 5px;
-	margin-bottom: 10px
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  border-left: 4px solid green;
+  color: green;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 svg {
-	animation: spin 1200ms linear 150ms infinite;
+  animation: spin 1200ms linear 150ms infinite;
 }
 .h-6 {
-	height: 18px;
+  height: 18px;
 }
 .w-6 {
-	width: 18px
+  width: 18px;
 }
 
 @keyframes spin {
-	from {
-		transform: rotate(0)
-	}
-	to {
-		transform: rotate(360deg)
-	}
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
